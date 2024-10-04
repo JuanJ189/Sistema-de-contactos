@@ -1,0 +1,52 @@
+﻿@model List<Proyecto_Bb_2.Models.Registro>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Contactos</title>
+</head>
+<body>
+    <header>
+        <h1>Sistema de registro de contactos</h1>
+    </header>
+    <div>
+        <h2>Lista de contactos</h2>
+        <div>
+            <a asp-action="Crear">Crear</a>
+        </div>
+    </div>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Celular</th>
+                    <th>Correo Electronico</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var registro in Model)
+                {
+                    <tr>
+                        <td>@registro.Id</td>
+                        <td>@registro.Name</td>
+                        <td>@registro.Edad</td>
+                        <td>@registro.Celular</td>
+                        <td>@registro.Correo</td>
+                    </tr>
+                    <tr>
+                        <td><a asp-action="Editar" asp-route-id="@registro.Id">Editar</a></td>
+                        <td><a asp-action="Eliminar" asp-route-id="@registro.Id">Eliminar</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>Todos los derechos reservados. Juan Jose Tito</p>
+    </footer>
+</body>
+</html>
