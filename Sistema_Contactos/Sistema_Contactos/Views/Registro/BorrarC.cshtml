@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "BorrarC";
+}
+@model Proyecto_Bb_2.Models.Registro
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Borrar contacto</title>
+    </head>
+    <body>
+        <header>
+            <h2>Borrar contacto</h2>
+        </header>
+        <main>
+            <div>
+                <h3>Seguro que quieres borrar el contacto</h3>
+                <p>Nombre: @Model.Name</p>
+                <p>Edad: @Model.Edad</p>
+                <p>Celular: @Model.Celular</p>
+                <p>Correo: @Model.Correo</p>
+            </div>
+            <form asp-action="Borrar" method="post" asp-route-id="@Model.Id">
+                <button type="Submit" >Borrar</button>
+                <a asp-action="Index">Cancelar</a>
+            </form>
+            
+        </main>
+        <footer>
+            <p>Todos los derechos reservados. Juan Jose Tito</p>
+        </footer>
+    </body>
+</html>

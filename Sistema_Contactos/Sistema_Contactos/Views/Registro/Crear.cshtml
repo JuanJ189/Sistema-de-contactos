@@ -1,23 +1,54 @@
-﻿@{
-    ViewData["Title"] = "Crear";
+﻿
+@{
+    ViewData  ["Title"] = "Crear";
 }
+
 @model Proyecto_Bb_2.Models.Registro
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Registro de Contactos</title>
-    </head>
-    <body>
-        <header>
-
-        </header>
-        <main>
-
-        </main>
-        <footer>
-            <p>Todos los derechos reservados. Juan Jose Tito</p>
-        </footer>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Contactos</title>
+</head>
+<body>
+    <header>
+        <h2>Crear nuevo contacto</h2>
+    </header>
+    <main>
+        <form method="post" aps-action="Crear">
+            <fieldset>
+                <legend>Llena este formulario para crear el nuevo contacto</legend>
+                <div>
+                    <div>
+                        <label asp-for="Name">Nombre </label>
+                        <input type="text" asp-for="Name" placeholder="Nombre" />
+                        <span asp-validation-for="Name"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Edad">Edad</label>
+                        <input type="number" asp-for="Edad" placeholder="Numero de celular" />
+                        <span asp-validation-for="Edad"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Celular">Celular</label>
+                        <input type="tel" asp-for="Celular" placeholder="Numero de celular" />
+                        <span asp-validation-for="Celular"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Correo">Correo</label>
+                        <input asp-for="Correo" type="email" name="correo" placeholder="Email"/>
+                        <span asp-validation-for="Correo"></span>
+                    </div>
+                </div>
+            </fieldset>
+            <div>
+                <button type="submit">Guardar contacto</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>Todos los derechos reservados. Juan Jose Tito</p>
+    </footer>
+</body>
 </html>

@@ -16,8 +16,8 @@ namespace Proyecto_Bb_2.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var registros = await _registro.Find(_ => true).ToListAsync();
-            return View(registros);
+            var Registros = await _registro.Find(_ => true).ToListAsync();
+            return View(Registros);
         }
         public IActionResult Crear()
         {
@@ -60,9 +60,9 @@ namespace Proyecto_Bb_2.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> Editar(string Id,[Bind("Name", "Edad", "Celular", "Correo")] Registro registro)
+        public async Task<IActionResult> Editar(string Id,[Bind("Id","Name", "Edad", "Celular", "Correo")] Registro registro)
         {
-            if (Id != null)
+            if (Id == null)
             {
                 return NotFound();
             }
@@ -74,7 +74,7 @@ namespace Proyecto_Bb_2.Controllers
             return View(registro);
         }
 
-        public async Task<IActionResult> Borrar (string Id)
+        public async Task<IActionResult> BorrarC (string Id)
         {
             if (Id == null)
             {
@@ -90,8 +90,12 @@ namespace Proyecto_Bb_2.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> Borrar(string Id, [Bind("Name", "Edad", "Celular", "Correo")] Registro registro)
+        public async Task<IActionResult> Borrar(string Id)
         {
+            if (Id == null)
+            {
+                return NotFound();
+            }
             await _registro.DeleteOneAsync(p => p.Id == Id);
             return RedirectToAction(nameof(Index));
         }

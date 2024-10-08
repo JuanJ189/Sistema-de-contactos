@@ -1,5 +1,53 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Editar";
 }
+@model Proyecto_Bb_2.Models.Registro
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Editar</title>
+    </head>
+    <body>
+        <header>
+            <h2>Editar contacto</h2>
+        </header>
+        <main>
+        <form method="post" asp-action="Editar">
+                <fieldset>
+                    <legend>Puedes editar los campos</legend>
+                    <input type="hidden" asp-for="Id" />
+                    <div>
+                        <div>
+                            <label asp-for="Name">Nombre</label>
+                            <input type="text" asp-for="Name"/>
+                            <span asp-validation-for="Name"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Edad">Edad</label>
+                            <input type="number" asp-for="Edad" />
+                            <span asp-validation-for="Edad"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Celular">Celular</label>
+                            <input type="tel" asp-for="Celular" />
+                            <span asp-validation-for="Celular"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Correo">Correo</label>
+                            <input name="Correo" type="email" asp-for="Correo" />
+                            <span asp-validation-for="Correo" ></span>
+                        </div>
+                    </div>
+                </fieldset>
+                <div>
+                    <button type="submit">Editar contacto</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <p>Todos los derechos reservados. Juan Jose Tito</p>
+        </footer>
+    </body>
+</html>
