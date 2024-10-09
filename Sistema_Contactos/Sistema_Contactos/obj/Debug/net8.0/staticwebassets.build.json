@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DCjnjjc5lcLy2Zh6usxrz1pPqMe+fNHCYSrz/3t5G6g=",
+  "Hash": "eniOFghXDMyVCbzZhi2a5qvPnZbcfMKxa5dhDj7W0yU=",
   "Source": "Sistema_Contactos",
   "BasePath": "_content/Sistema_Contactos",
   "Mode": "Default",
@@ -1231,6 +1231,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Subidos\\image-removebg-preview (1).png"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\OneDrive\\Escritorio\\Github\\hola\\Sistema-de-contactos\\Sistema_Contactos\\Sistema_Contactos\\wwwroot\\Subidos\\image-removebg-preview (2).png",
+      "SourceId": "Sistema_Contactos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\OneDrive\\Escritorio\\Github\\hola\\Sistema-de-contactos\\Sistema_Contactos\\Sistema_Contactos\\wwwroot\\",
+      "BasePath": "_content/Sistema_Contactos",
+      "RelativePath": "Subidos/image-removebg-preview (2).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Subidos\\image-removebg-preview (2).png"
     },
     {
       "Identity": "C:\\Users\\HP\\OneDrive\\Escritorio\\Github\\hola\\Sistema-de-contactos\\Sistema_Contactos\\Sistema_Contactos\\wwwroot\\Subidos\\image-removebg-preview (3).png",

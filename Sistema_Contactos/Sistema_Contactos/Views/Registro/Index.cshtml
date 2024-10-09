@@ -18,35 +18,25 @@
         </div>
     </div>
     <main>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Edad</th>
-                    <th>Celular</th>
-                    <th>Correo Electronico</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var registro in Model)
-                {
-                    <tr>
-                        <td>@registro.Id</td>
-                        <td>@registro.Name</td>
-                        <td>@registro.Edad</td>
-                        <td>@registro.Celular</td>
-                        <td>@registro.Correo</td>
-                        <td><img src="@registro.Foto" alt="Foto de contacto"/></td>
-                    </tr>
-                    <tr>
-                        <td><a asp-action="Editar" asp-route-id="@registro.Id">Editar</a></td>
-                        <td><a asp-action="BorrarC" asp-route-id="@registro.Id">Eliminar</a></td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+        @foreach(var registro in Model)
+        {
+            <div>
+                <div>
+                    <img src="@registro.Foto" alt="Foto de contacto" />
+                    <div>
+                        <a asp-action="Editar" asp-route-id="@registro.Id">Editar</a>
+                        <a asp-action="BorrarC" asp-route-id="@registro.Id">Eliminar</a>
+                    </div>
+                </div>
+                <div>
+                    <p>Nombre: <span>@registro.Name</span></p>
+                    <p>Edad: <span>@registro.Edad</span></p>
+                    <p>
+                        Celular: <span>@registro.Celular</span> <a href="https://wa.me/591@(registro.Celular)" target="_blank">Contactar</a></p>
+                    <p>Correo: <span>@registro.Correo</span> <a href="mailto:@(registro.Correo)">Contactar</a> </p>
+                </div>
+            </div>
+        }
     </main>
     <footer>
         <p>Todos los derechos reservados. Juan Jose Tito</p>

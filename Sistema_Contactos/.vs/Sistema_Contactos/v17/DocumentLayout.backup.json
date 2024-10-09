@@ -62,8 +62,7 @@
               "RelativeToolTip": "Sistema_Contactos\\Views\\Registro\\Editar.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAwwCsAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-08T23:22:52.258Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-08T23:22:52.258Z"
             },
             {
               "$type": "Document",
@@ -73,7 +72,7 @@
               "RelativeDocumentMoniker": "Sistema_Contactos\\Views\\Registro\\Index.cshtml",
               "ToolTip": "C:\\Users\\HP\\OneDrive\\Escritorio\\Github\\hola\\Sistema-de-contactos\\Sistema_Contactos\\Sistema_Contactos\\Views\\Registro\\Index.cshtml",
               "RelativeToolTip": "Sistema_Contactos\\Views\\Registro\\Index.cshtml",
-              "ViewState": "AgIAABMAAAAAAAAAAAAwwCIAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACcAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-08T23:05:37.961Z",
               "EditorCaption": ""
@@ -112,8 +111,7 @@
               "RelativeToolTip": "Sistema_Contactos\\Models\\Registro.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T13:26:44.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T13:26:44.96Z"
             }
           ]
         }
