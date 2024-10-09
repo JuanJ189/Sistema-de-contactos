@@ -18,6 +18,7 @@
         </div>
     </div>
     <main>
+
         <table>
             <thead>
                 <tr>
@@ -32,7 +33,7 @@
                 @foreach (var registro in Model)
                 {
                     <tr>
-                        
+                        <td>@registro.Id</td>
                         <td>@registro.Name</td>
                         <td>@registro.Edad</td>
                         <td>@registro.Celular</td>
