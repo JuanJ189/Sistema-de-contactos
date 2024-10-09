@@ -11,6 +11,6 @@ namespace Proyecto_Bb_2.Models
         public int Edad { get; set; }
         public int Celular { get; set; }
         public string Correo { get; set; } = null!;
-
+        public string Foto { get; set; } = null!;
     }
 }

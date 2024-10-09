@@ -16,7 +16,7 @@
         <h2>Crear nuevo contacto</h2>
     </header>
     <main>
-        <form method="post" aps-action="Crear">
+        <form method="post" aps-action="Crear" enctype="multipart/form-data">
             <fieldset>
                 <legend>Llena este formulario para crear el nuevo contacto</legend>
                 <div>
@@ -27,7 +27,7 @@
                     </div>
                     <div>
                         <label asp-for="Edad">Edad</label>
-                        <input type="number" asp-for="Edad" placeholder="Numero de celular" />
+                        <input type="number" asp-for="Edad" placeholder="Edad" />
                         <span asp-validation-for="Edad"></span>
                     </div>
                     <div>
@@ -39,6 +39,10 @@
                         <label asp-for="Correo">Correo</label>
                         <input asp-for="Correo" type="email" name="correo" placeholder="Email"/>
                         <span asp-validation-for="Correo"></span>
+                    </div>
+                    <div>
+                        <label>Foto</label>
+                        <input type="file" name="Foto" accept="image/*" />
                     </div>
                 </div>
             </fieldset>

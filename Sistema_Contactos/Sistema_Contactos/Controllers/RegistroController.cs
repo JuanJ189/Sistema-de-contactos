@@ -27,9 +27,26 @@ namespace Proyecto_Bb_2.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> Crear([Bind("Name","Edad","Celular","Correo")] Registro registro)
+        public async Task<IActionResult> Crear([Bind("Name","Edad","Celular","Correo")] Registro registro, IFormFile foto)
         {
             registro.Id = ObjectId.GenerateNewId().ToString();
+            if (foto != null && foto.Length > 0)
+            {
+                var subir = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Subidos");
+                //Cambiar nombre
+                var filename = Path.GetFileName(foto.FileName);
+                var filepath = Path.Combine(subir, filename);
+                //Guardar imagen
+                using (var stream = new FileStream(filepath, FileMode.Create))
+                {
+                    await foto.CopyToAsync(stream);
+                }
+                registro.Foto = $"/Subidos/{filename}";
+            }
+            else
+            {
+                registro.Foto = "/Defecto/Contac_img.jpg";
+            }
             try
             {
                 await _registro.InsertOneAsync(registro);
@@ -60,18 +77,49 @@ namespace Proyecto_Bb_2.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> Editar(string Id,[Bind("Id","Name", "Edad", "Celular", "Correo")] Registro registro)
+        public async Task<IActionResult> Editar(string Id, Registro registro, IFormFile foto)
         {
             if (Id == null)
             {
                 return NotFound();
+            }
+            var registro_ex = await _registro.Find(p => p.Id==Id).FirstOrDefaultAsync();
+            if (registro_ex == null)
+            {
+                return NotFound();
+            }
+            ModelState.Remove("Foto");
+            //si se sube una nueva foto, reemplzar la anterior
+            if (foto != null && foto.Length > 0)
+            {
+                var subir = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Subidos");
+                var filename = Path.GetFileName(foto.FileName);
+                var filepath = Path.Combine(subir, filename);
+
+                using (var stream = new FileStream(filepath, FileMode.Create))
+                {
+                    await foto.CopyToAsync(stream);
+                }
+                registro.Foto = $"/Subidos/{filename}";
+            }
+            else
+            {
+                registro.Foto = registro_ex.Foto;
             }
             if (ModelState.IsValid)
             {
                 await _registro.ReplaceOneAsync(p => p.Id == Id, registro);
                 return RedirectToAction(nameof(Index));
             }
-            return View(registro);
+            else
+            {
+                foreach (var modelError in ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    Console.WriteLine(modelError.ErrorMessage);
+                 }
+                return View(registro);
+            }
+            
         }
 
         public async Task<IActionResult> BorrarC (string Id)

@@ -11,10 +11,10 @@
     </head>
     <body>
         <header>
-            <h2>Editar contacto</h2>
+            <h2>Editar contacto</h2>    
         </header>
         <main>
-        <form method="post" asp-action="Editar">
+        <form method="post" asp-action="Editar" enctype="multipart/form-data">
                 <fieldset>
                     <legend>Puedes editar los campos</legend>
                     <input type="hidden" asp-for="Id" />
@@ -38,6 +38,10 @@
                             <label asp-for="Correo">Correo</label>
                             <input name="Correo" type="email" asp-for="Correo" />
                             <span asp-validation-for="Correo" ></span>
+                        </div>
+                        <div>
+                            <label>Foto</label>
+                            <input type="file" name="Foto"/>
                         </div>
                     </div>
                 </fieldset>

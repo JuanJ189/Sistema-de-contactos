@@ -32,11 +32,12 @@
                 @foreach (var registro in Model)
                 {
                     <tr>
-                        <td>@registro.Id</td>
+                        
                         <td>@registro.Name</td>
                         <td>@registro.Edad</td>
                         <td>@registro.Celular</td>
                         <td>@registro.Correo</td>
+                        <td><img src="@registro.Foto" alt="Foto de contacto"/></td>
                     </tr>
                     <tr>
                         <td><a asp-action="Editar" asp-route-id="@registro.Id">Editar</a></td>

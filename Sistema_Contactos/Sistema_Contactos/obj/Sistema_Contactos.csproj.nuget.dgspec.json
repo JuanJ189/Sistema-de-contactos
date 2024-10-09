@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\OneDrive\\Escritorio\\Github\\Sistema-de-contactos\\Sistema_Contactos\\Sistema_Contactos\\Sistema_Contactos.csproj": {}
+    "C:\\Users\\HP\\OneDrive\\Escritorio\\Github\\hola\\Sistema-de-contactos\\Sistema_Contactos\\Sistema_Contactos\\Sistema_Contactos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\OneDrive\\Escritorio\\Github\\Sistema-de-contactos\\Sistema_Contactos\\Sistema_Contactos\\Sistema_Contactos.csproj": {
+    "C:\\Users\\HP\\OneDrive\\Escritorio\\Github\\hola\\Sistema-de-contactos\\Sistema_Contactos\\Sistema_Contactos\\Sistema_Contactos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\OneDrive\\Escritorio\\Github\\Sistema-de-contactos\\Sistema_Contactos\\Sistema_Contactos\\Sistema_Contactos.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\OneDrive\\Escritorio\\Github\\hola\\Sistema-de-contactos\\Sistema_Contactos\\Sistema_Contactos\\Sistema_Contactos.csproj",
         "projectName": "Sistema_Contactos",
-        "projectPath": "C:\\Users\\HP\\OneDrive\\Escritorio\\Github\\Sistema-de-contactos\\Sistema_Contactos\\Sistema_Contactos\\Sistema_Contactos.csproj",
+        "projectPath": "C:\\Users\\HP\\OneDrive\\Escritorio\\Github\\hola\\Sistema-de-contactos\\Sistema_Contactos\\Sistema_Contactos\\Sistema_Contactos.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\OneDrive\\Escritorio\\Github\\Sistema-de-contactos\\Sistema_Contactos\\Sistema_Contactos\\obj\\",
+        "outputPath": "C:\\Users\\HP\\OneDrive\\Escritorio\\Github\\hola\\Sistema-de-contactos\\Sistema_Contactos\\Sistema_Contactos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
