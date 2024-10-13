@@ -1,9 +1,9 @@
 ﻿namespace Proyecto_Bb_2.Data
 {
-    public class Db_contacto : IDb_contacto
+    public class Db_actividades : IDb_actividades
     {
         public string Db_connection { get; set; } = null!;
         public string Db_name { get; set; } = null!;
-        public string C_Contactos { get; set; } = "Contactos";
+        public string C_Actividades { get; set; } = "Actividades";
     }
 }

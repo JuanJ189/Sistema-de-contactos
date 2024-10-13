@@ -1,0 +1,27 @@
+﻿@model Proyecto_Bb_2.Models.RegistroAc
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrar actividad</title>
+</head>
+<body>
+    <h2>Eliminar actividad</h2>
+    <main>
+        <div>
+            <h3>Titulo: <span>@Model.Titulo</span></h3>
+            <p>Fecha de creacion fecha: @Model.Fecha_creacion</p>
+            <p>Fecha de actividad: @Model.Fecha</p>
+            <p>Descripción: </p>
+            <p>@Model.Descripcion</p>
+
+            <p>Seguro que quieres borrar esta actividad</p>
+        </div>
+        <form asp-action="Borrar" method="post" asp-route-id="@Model.Id">
+            <button type="Submit">Borrar</button>
+            <a asp-action="Index">Cancelar</a>
+        </form>
+    </main>
+</body>
+</html>

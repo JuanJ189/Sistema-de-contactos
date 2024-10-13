@@ -18,6 +18,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\HP\OneDrive\Escritorio\Github\hola\Sistema-de-contactos\Sistema_Contactos\Sistema_Contactos
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/HP/OneDrive/Escritorio/Github/hola/Sistema-de-contactos/Sistema_Contactos/Sistema_Contactos/Views/Actividades/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0aXZpZGFkZXNcQ3JlYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/OneDrive/Escritorio/Github/hola/Sistema-de-contactos/Sistema_Contactos/Sistema_Contactos/Views/Actividades/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0aXZpZGFkZXNcRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/OneDrive/Escritorio/Github/hola/Sistema-de-contactos/Sistema_Contactos/Sistema_Contactos/Views/Actividades/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0aXZpZGFkZXNcRWxpbWluYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/OneDrive/Escritorio/Github/hola/Sistema-de-contactos/Sistema_Contactos/Sistema_Contactos/Views/Actividades/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0aXZpZGFkZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/HP/OneDrive/Escritorio/Github/hola/Sistema-de-contactos/Sistema_Contactos/Sistema_Contactos/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

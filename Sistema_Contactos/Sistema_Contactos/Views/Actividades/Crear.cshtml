@@ -1,0 +1,48 @@
+﻿@{
+
+}
+@model Proyecto_Bb_2.Models.RegistroAc
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Actividad</title>
+    </head>
+    <body>
+        <header>
+            <h2>Crear nueva actividad</h2>
+        </header>
+        <main>
+            <form method="post" asp-action="Crear">
+                <fieldset>
+                    <legend>LLena este formulario para crear una nuve actividad</legend>
+                    <div>
+                        <div>
+                            <label asp-for="Titulo">Titulo</label>
+                            <input type="text" asp-for="Titulo" placeholder="Titulo de la actividad" />
+                            <span asp-validation-for="Titulo"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Fecha">Fecha de la actividad</label>
+                            <input type="datetime-local" asp-for="Fecha" required />
+                            <span asp-validation-for="Fecha"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Descripcion">Descripcion</label>
+                            <textarea asp-for="Descripcion" placeholder="Agrega una descripcion"></textarea>
+                            <span asp-validation-for="Descripcion"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Notificacion">Notificación</label>
+                            <input type="checkbox" asp-for="Notificacion" />
+                        </div>
+                        <div>
+                            <button type="submit">Guardar actividad</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </main>
+    </body>
+</html>

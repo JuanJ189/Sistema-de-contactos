@@ -6,11 +6,20 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+//Conexion de base de datos de los contactos
 builder.Services.Configure<Db_contacto>(builder.Configuration.GetSection("Db_config"));
 builder.Services.AddSingleton<IMongoClient>(sp =>
 {
-    var codig = sp.GetRequiredService<IOptions<Db_contacto>>().Value;
-    return new MongoClient(codig.Db_connection);
+    var ConfigContacto = sp.GetRequiredService<IOptions<Db_contacto>>().Value;
+    return new MongoClient(ConfigContacto.Db_connection);
+});
+
+//Conexion con la base de datos para actividades
+builder.Services.Configure<Db_actividades>(builder.Configuration.GetSection("Db_config"));
+builder.Services.AddSingleton<IMongoClient>(sp =>
+{
+    var ConfigActividad = sp.GetRequiredService<IOptions<Db_actividades>>().Value;
+    return new MongoClient(ConfigActividad.Db_connection);
 });
 
 var app = builder.Build();
