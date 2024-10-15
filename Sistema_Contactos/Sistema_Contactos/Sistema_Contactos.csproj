@@ -15,4 +15,8 @@
     <Folder Include="wwwroot\Subidos\" />
   </ItemGroup>
 
+  <ItemGroup>
+      <PackageReference Include="MailKit" Version="4.8.0" />
+   </ItemGroup>
+
 </Project>

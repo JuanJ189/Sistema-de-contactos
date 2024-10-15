@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "M9+qbejIrQsHs8EOABEaxU3hIO5E9ikqRteRWsPsGnc=",
+  "Hash": "pinQYY9y+Q1VXicNukalMm2MSTq0iqp/HiPiORMAKe4=",
   "Source": "Sistema_Contactos",
   "BasePath": "_content/Sistema_Contactos",
   "Mode": "Default",
@@ -1212,25 +1212,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
-    },
-    {
-      "Identity": "C:\\Users\\HP\\OneDrive\\Escritorio\\Github\\hola\\Sistema-de-contactos\\Sistema_Contactos\\Sistema_Contactos\\wwwroot\\Subidos\\Juan Jose Tito.jpg",
-      "SourceId": "Sistema_Contactos",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\HP\\OneDrive\\Escritorio\\Github\\hola\\Sistema-de-contactos\\Sistema_Contactos\\Sistema_Contactos\\wwwroot\\",
-      "BasePath": "_content/Sistema_Contactos",
-      "RelativePath": "Subidos/Juan Jose Tito.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Subidos\\Juan Jose Tito.jpg"
     }
   ]
 }

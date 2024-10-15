@@ -135,3 +135,6 @@ C:\Users\HP\OneDrive\Escritorio\Github\hola\Sistema-de-contactos\Sistema_Contact
 C:\Users\HP\OneDrive\Escritorio\Github\hola\Sistema-de-contactos\Sistema_Contactos\Sistema_Contactos\obj\Debug\net8.0\Sistema_Contactos.pdb
 C:\Users\HP\OneDrive\Escritorio\Github\hola\Sistema-de-contactos\Sistema_Contactos\Sistema_Contactos\obj\Debug\net8.0\Sistema_Contactos.genruntimeconfig.cache
 C:\Users\HP\OneDrive\Escritorio\Github\hola\Sistema-de-contactos\Sistema_Contactos\Sistema_Contactos\obj\Debug\net8.0\ref\Sistema_Contactos.dll
+C:\Users\HP\OneDrive\Escritorio\Github\hola\Sistema-de-contactos\Sistema_Contactos\Sistema_Contactos\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\HP\OneDrive\Escritorio\Github\hola\Sistema-de-contactos\Sistema_Contactos\Sistema_Contactos\bin\Debug\net8.0\MailKit.dll
+C:\Users\HP\OneDrive\Escritorio\Github\hola\Sistema-de-contactos\Sistema_Contactos\Sistema_Contactos\bin\Debug\net8.0\MimeKit.dll

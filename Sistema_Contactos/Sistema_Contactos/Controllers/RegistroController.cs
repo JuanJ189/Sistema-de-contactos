@@ -14,10 +14,12 @@ namespace Proyecto_Bb_2.Controllers
             var Db = mongo.GetDatabase("Proyecto_Bb_2");
             _registro = Db.GetCollection<Registro>("Contactos");
         }
+
         public async Task<IActionResult> Index()
         {
             var Registros = await _registro.Find(_ => true).ToListAsync();
             return View(Registros);
+            
         }
         public IActionResult Crear()
         {
@@ -50,6 +52,7 @@ namespace Proyecto_Bb_2.Controllers
             try
             {
                 await _registro.InsertOneAsync(registro);
+                Console.WriteLine($"Nuevo Contacto creado {registro.Name}");
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
@@ -64,6 +67,7 @@ namespace Proyecto_Bb_2.Controllers
         {
             if (Id == null)
             {
+                Console.WriteLine("Error al recibir el Id");
                 return NotFound();
             }
             var registro = await _registro.Find(p => p.Id == Id).FirstOrDefaultAsync();
@@ -109,6 +113,7 @@ namespace Proyecto_Bb_2.Controllers
             if (ModelState.IsValid)
             {
                 await _registro.ReplaceOneAsync(p => p.Id == Id, registro);
+                Console.WriteLine($"El contacto de {registro_ex.Name} se edito correctamente");
                 return RedirectToAction(nameof(Index));
             }
             else
@@ -133,6 +138,7 @@ namespace Proyecto_Bb_2.Controllers
             {
                 return NotFound();
             }
+            
             return View(registro);
         }
         [HttpPost]
@@ -145,6 +151,7 @@ namespace Proyecto_Bb_2.Controllers
                 return NotFound();
             }
             await _registro.DeleteOneAsync(p => p.Id == Id);
+            Console.WriteLine($"El contacto fue borrado correctamente");
             return RedirectToAction(nameof(Index));
         }
     }

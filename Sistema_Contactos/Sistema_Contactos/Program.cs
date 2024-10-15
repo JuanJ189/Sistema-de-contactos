@@ -1,12 +1,13 @@
 using MongoDB.Driver;
 using Microsoft.Extensions.Options;
 using Proyecto_Bb_2.Data;
+using Proyecto_Bb_2.Servicios;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-//Conexion de base de datos de los contactos
+//Confu de base de datos de los contactos
 builder.Services.Configure<Db_contacto>(builder.Configuration.GetSection("Db_config"));
 builder.Services.AddSingleton<IMongoClient>(sp =>
 {
@@ -22,6 +23,12 @@ builder.Services.AddSingleton<IMongoClient>(sp =>
     return new MongoClient(ConfigActividad.Db_connection);
 });
 
+//conexion con email
+// Cargar configuración de EmailConfig
+builder.Services.Configure<EmailConfig>(builder.Configuration.GetSection("EmailConfig"));
+builder.Services.AddTransient<EmailService>();
+builder.Services.AddHostedService<Notificaciones>();
+Console.WriteLine("Configuracion con la base de datos y servicio de Email establecido");
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

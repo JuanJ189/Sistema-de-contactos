@@ -4,6 +4,7 @@ using Microsoft.Win32;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using Proyecto_Bb_2.Models;
+using Proyecto_Bb_2.Servicios;
 
 namespace Proyecto_Bb_2.Controllers
 {
@@ -15,6 +16,7 @@ namespace Proyecto_Bb_2.Controllers
         {
             var db = mongo.GetDatabase("Proyecto_Bb_2");
             _actividades = db.GetCollection<RegistroAc>("Actividades");
+            
         }
 
         public async Task<IActionResult> Index()
@@ -33,9 +35,13 @@ namespace Proyecto_Bb_2.Controllers
         {
             actividad.Fecha_creacion = DateTime.Now;
             actividad.Id = ObjectId.GenerateNewId().ToString();
+            actividad.Fecha = DateTime.SpecifyKind(actividad.Fecha, DateTimeKind.Utc);
+
+            Console.WriteLine($"Fecha de creación: {actividad.Fecha_creacion}");
             try
             {
                 await _actividades.InsertOneAsync(actividad);
+                Console.WriteLine($"Nueva actividad creada {actividad.Titulo}");
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
@@ -72,9 +78,11 @@ namespace Proyecto_Bb_2.Controllers
             {
                 registro.Id = acoriginal.Id;
                 registro.Fecha_creacion = acoriginal.Fecha_creacion;
+                registro.Fecha = DateTime.SpecifyKind(registro.Fecha, DateTimeKind.Utc);
                 try
                 {
                     await _actividades.ReplaceOneAsync(a => a.Id == Id, registro);
+                    Console.WriteLine($"Actividad {registro.Titulo} editada");
                     return RedirectToAction(nameof(Index));
                 }
                 catch (Exception ex)
@@ -108,6 +116,7 @@ namespace Proyecto_Bb_2.Controllers
                 return NotFound();
             }
             await _actividades.DeleteOneAsync(p => p.Id == Id);
+            Console.WriteLine("Actividad Eliminada");
             return RedirectToAction(nameof(Index));
         }
 

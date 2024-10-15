@@ -5,6 +5,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preload" href="~/css/site.css" as="style" />
+        <link rel="stylesheet" href="~/css/site.css" />
         <title>Registro de actividades</title>
     </head>
     <body>
@@ -20,7 +22,7 @@
             <div>
                 <div>
                     <h3>@actividad.Titulo</h3>
-                    <p>Fecha de creación: <span>@actividad.Fecha_creacion</span></p>
+                    <p>Fecha de creación: <span>@actividad.Fecha_creacion.ToLocalTime().ToString("dd/MM/yyyy HH:mm:ss")</span></p>
                     <p>Fecha de la actividad: <span>@actividad.Fecha</span></p>
                     <p>Descripcion:</p>
                     <p>@actividad.Descripcion</p>
